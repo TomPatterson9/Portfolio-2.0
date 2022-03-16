@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  #171c28;;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: #181818;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#container{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 90vh;
+  
+}
+.title {
+  font-size: 48px;
+  margin: 0px 0px 0px 30px;
+  width: 100%;
+}
+.subtitle{
+  font-size: 24px;
+  margin: 0px 0px 0px 30px;
+  width: 100%;
+  font-weight: normal;
+  line-height: 2;
+}
+.button { 
+  font-size: 18px;
+  border: none;
+  background-color: #551b89;
+  color:white;
+  padding: 10px 20px;
+  margin: 25px 0px 0px 30px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  cursor:pointer;
+}
+.button:hover{
+  background-color: white;
+  color:#551b89;
+}
+
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: white;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 25px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  background-color: #551b89;
+}
+
+
+
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
